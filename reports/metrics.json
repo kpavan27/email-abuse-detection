@@ -1,0 +1,491 @@
+{
+  "candidates": {
+    "naive_bayes_word": {
+      "val_pr_auc_by_c": {
+        "none": 0.9990322456097604
+      },
+      "threshold": 0.7070427187974944,
+      "val_recall_at_threshold": 0.9720309810671256,
+      "test": {
+        "precision": 0.9950477538026176,
+        "recall": 0.9679972470750172,
+        "fpr": 0.0048126503953248535,
+        "f1": 0.9813361241932671,
+        "tp": 2813.0,
+        "fp": 14.0,
+        "tn": 2895.0,
+        "fn": 93.0,
+        "pr_auc": 0.998926666719332,
+        "roc_auc": 0.9989745141510895
+      }
+    },
+    "logreg_word": {
+      "val_pr_auc_by_c": {
+        "2.0": 0.9982204854126479,
+        "8.0": 0.9987857729221112,
+        "32.0": 0.9989417726419957,
+        "128.0": 0.9989992729435494
+      },
+      "threshold": 0.8288391495959214,
+      "val_recall_at_threshold": 0.9746127366609294,
+      "test": {
+        "precision": 0.9950825430277485,
+        "recall": 0.9748795595320028,
+        "fpr": 0.0048126503953248535,
+        "f1": 0.984877455240744,
+        "tp": 2833.0,
+        "fp": 14.0,
+        "tn": 2895.0,
+        "fn": 73.0,
+        "pr_auc": 0.9982375595530327,
+        "roc_auc": 0.9987841800028722
+      }
+    },
+    "logreg_word_char": {
+      "val_pr_auc_by_c": {
+        "2.0": 0.9988257167871661,
+        "8.0": 0.9990475864690213,
+        "32.0": 0.9991349137051893,
+        "128.0": 0.9991706778256552
+      },
+      "threshold": 0.8560200645437683,
+      "val_recall_at_threshold": 0.9793459552495697,
+      "test": {
+        "precision": 0.9957879957879958,
+        "recall": 0.9762560220233999,
+        "fpr": 0.004125128910278446,
+        "f1": 0.9859252823631625,
+        "tp": 2837.0,
+        "fp": 12.0,
+        "tn": 2897.0,
+        "fn": 69.0,
+        "pr_auc": 0.9987974373721695,
+        "roc_auc": 0.9991591702140898
+      }
+    }
+  },
+  "selected_model": "logreg_word_char",
+  "selected_test_ci95": {
+    "recall": [
+      0.9707501720578114,
+      0.9817618719889883
+    ],
+    "precision": [
+      0.993319151099986,
+      0.9978903138973549
+    ],
+    "fpr": [
+      0.002062564455139223,
+      0.006531454107940873
+    ],
+    "pr_auc": [
+      0.9972019225514254,
+      0.9996696930871733
+    ]
+  },
+  "mcnemar_selected_vs_baseline": {
+    "a_right_b_wrong": 51,
+    "a_wrong_b_right": 25,
+    "statistic": 8.223684210526315,
+    "p_value": 0.004134717305500615,
+    "exact": false
+  },
+  "top_features": {
+    "spam": [
+      [
+        "char__ ! ",
+        6.945846774100343
+      ],
+      [
+        "word__no",
+        5.7299760920783065
+      ],
+      [
+        "word__your",
+        5.2393578895575805
+      ],
+      [
+        "word__here",
+        4.619473640598887
+      ],
+      [
+        "char__ % ",
+        4.485779551784882
+      ],
+      [
+        "word__you",
+        4.458633972407452
+      ],
+      [
+        "char__ ] ",
+        4.418242497537547
+      ],
+      [
+        "word__http",
+        4.378632005200675
+      ],
+      [
+        "char__ [ ",
+        4.349306512698452
+      ],
+      [
+        "word__mobile email",
+        4.254131350164375
+      ],
+      [
+        "word__phone mobile",
+        4.239465643539498
+      ],
+      [
+        "word__remove",
+        3.945645646641821
+      ],
+      [
+        "word__message subject",
+        3.9125819672103908
+      ],
+      [
+        "word__money",
+        3.906369128084135
+      ],
+      [
+        "char__ r ",
+        3.812996859538017
+      ],
+      [
+        "word__mobile",
+        3.7783200423477665
+      ],
+      [
+        "char__ med",
+        3.725951541780408
+      ],
+      [
+        "word__account",
+        3.6760281699398205
+      ],
+      [
+        "word__click here",
+        3.6728113602680854
+      ],
+      [
+        "word__life",
+        3.662768650221445
+      ]
+    ],
+    "ham": [
+      [
+        "char__ i ",
+        -7.427046216735127
+      ],
+      [
+        "char__ - ",
+        -5.958715144378107
+      ],
+      [
+        "char__ . ",
+        -5.845931815551701
+      ],
+      [
+        "char__ \" ",
+        -5.772197336126309
+      ],
+      [
+        "char__ ( ",
+        -5.678559337103658
+      ],
+      [
+        "word__website",
+        -5.1962818419855985
+      ],
+      [
+        "word__the",
+        -5.182015681124068
+      ],
+      [
+        "word__doc",
+        -5.022376959303503
+      ],
+      [
+        "word__thanks",
+        -4.962951218987256
+      ],
+      [
+        "char__ > ",
+        -4.92029924496321
+      ],
+      [
+        "char__ th",
+        -4.666291669596737
+      ],
+      [
+        "word__pm",
+        -4.391241101713733
+      ],
+      [
+        "word__gas",
+        -4.288230908240026
+      ],
+      [
+        "word__attached",
+        -4.237376953681953
+      ],
+      [
+        "char__ the ",
+        -4.23318989100744
+      ],
+      [
+        "char__ & ",
+        -4.204039701459438
+      ],
+      [
+        "char__the ",
+        -4.033769017818426
+      ],
+      [
+        "word__htm",
+        -4.016293546309087
+      ],
+      [
+        "char__he ",
+        -4.016115216891016
+      ],
+      [
+        "word__on",
+        -4.000902118948059
+      ]
+    ]
+  },
+  "shortcut_experiment": {
+    "description": "Model trained on unmasked text, evaluated on unmasked test and on the same test messages with identity tokens removed (simulating mail from outside the Enron mailboxes).",
+    "unmasked_test": {
+      "precision": 0.9978753541076487,
+      "recall": 0.9697178251892636,
+      "fpr": 0.002062564455139223,
+      "f1": 0.9835951134380454,
+      "tp": 2818.0,
+      "fp": 6.0,
+      "tn": 2903.0,
+      "fn": 88.0,
+      "pr_auc": 0.9990374778771224,
+      "roc_auc": 0.9993299859443733
+    },
+    "identity_removed_test": {
+      "precision": 0.9968164131588256,
+      "recall": 0.9697178251892636,
+      "fpr": 0.0030938466827088347,
+      "f1": 0.9830804116518402,
+      "tp": 2818.0,
+      "fp": 9.0,
+      "tn": 2900.0,
+      "fn": 88.0,
+      "pr_auc": 0.9988380992636304,
+      "roc_auc": 0.9991390603289457
+    },
+    "top_ham_features_unmasked": [
+      [
+        "word__enron",
+        -10.27244287949963
+      ],
+      [
+        "char__ i ",
+        -6.569181509280839
+      ],
+      [
+        "word__vince",
+        -6.549210188384746
+      ],
+      [
+        "char__ enr",
+        -6.457602047148688
+      ],
+      [
+        "char__ enro",
+        -6.360249243820831
+      ],
+      [
+        "char__enr",
+        -6.359863555750621
+      ],
+      [
+        "char__enro",
+        -6.346441120062368
+      ],
+      [
+        "char__nro",
+        -6.341381808142209
+      ],
+      [
+        "char__enron",
+        -6.27229778415346
+      ],
+      [
+        "char__nron",
+        -6.271705798342573
+      ],
+      [
+        "char__nron ",
+        -5.95589278387926
+      ],
+      [
+        "char__ron ",
+        -5.426520349396464
+      ],
+      [
+        "word__website",
+        -5.261069373976066
+      ],
+      [
+        "word__louise",
+        -5.2474254740080655
+      ],
+      [
+        "char__ \" ",
+        -5.176130888250804
+      ]
+    ]
+  },
+  "drift_experiment": {
+    "description": "Trained on ham + spam sent before 2005; recall compared on held-out spam from before 2005 (in-period) and from 2005 (future).",
+    "in_period_spam_n": 1309,
+    "future_spam_n": 1597,
+    "in_period_recall": 0.9717341482047365,
+    "future_recall": 0.9167188478396995,
+    "score_psi_in_period_vs_future": 0.38438973598032367
+  },
+  "error_analysis": {
+    "false_negatives": 69,
+    "false_positives": 12,
+    "fn_tags": [
+      {
+        "tag": "very_short",
+        "errors_with_tag": 27,
+        "share_of_errors": 0.391,
+        "share_of_class": 0.132,
+        "lift": 2.96
+      },
+      {
+        "tag": "commercial_language",
+        "errors_with_tag": 15,
+        "share_of_errors": 0.217,
+        "share_of_class": 0.298,
+        "lift": 0.73
+      },
+      {
+        "tag": "business_vocabulary",
+        "errors_with_tag": 9,
+        "share_of_errors": 0.13,
+        "share_of_class": 0.121,
+        "lift": 1.07
+      },
+      {
+        "tag": "reply_or_forward",
+        "errors_with_tag": 6,
+        "share_of_errors": 0.087,
+        "share_of_class": 0.066,
+        "lift": 1.32
+      },
+      {
+        "tag": "html_leftovers",
+        "errors_with_tag": 3,
+        "share_of_errors": 0.043,
+        "share_of_class": 0.054,
+        "lift": 0.81
+      },
+      {
+        "tag": "link_only",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.038,
+        "lift": 0.0
+      },
+      {
+        "tag": "obfuscation",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.036,
+        "lift": 0.0
+      },
+      {
+        "tag": "mostly_non_ascii",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.0,
+        "lift": NaN
+      }
+    ],
+    "fp_tags": [
+      {
+        "tag": "commercial_language",
+        "errors_with_tag": 4,
+        "share_of_errors": 0.333,
+        "share_of_class": 0.165,
+        "lift": 2.02
+      },
+      {
+        "tag": "very_short",
+        "errors_with_tag": 2,
+        "share_of_errors": 0.167,
+        "share_of_class": 0.136,
+        "lift": 1.23
+      },
+      {
+        "tag": "business_vocabulary",
+        "errors_with_tag": 2,
+        "share_of_errors": 0.167,
+        "share_of_class": 0.53,
+        "lift": 0.31
+      },
+      {
+        "tag": "reply_or_forward",
+        "errors_with_tag": 1,
+        "share_of_errors": 0.083,
+        "share_of_class": 0.328,
+        "lift": 0.25
+      },
+      {
+        "tag": "html_leftovers",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.015,
+        "lift": 0.0
+      },
+      {
+        "tag": "obfuscation",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.0,
+        "lift": NaN
+      },
+      {
+        "tag": "link_only",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.003,
+        "lift": 0.0
+      },
+      {
+        "tag": "mostly_non_ascii",
+        "errors_with_tag": 0,
+        "share_of_errors": 0.0,
+        "share_of_class": 0.0,
+        "lift": NaN
+      }
+    ],
+    "fp_subjects": [
+      "president @ juno . com : exciting news - free internet access !",
+      "valentines day help",
+      "gorons",
+      "welcome to the next wave in digital music",
+      "registration confirmation from spinner . com",
+      "fw : classic",
+      "usaee conference update from louise burke",
+      "info",
+      "ripley house photo album",
+      "holiday safety reminder",
+      "relief for earthquake victims in el salvador",
+      "enron capitalism"
+    ]
+  },
+  "runtime_seconds": 604.4
+}

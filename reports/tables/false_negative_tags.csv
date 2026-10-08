@@ -1,0 +1,9 @@
+tag,errors_with_tag,share_of_errors,share_of_class,lift
+very_short,27,0.391,0.132,2.96
+commercial_language,15,0.217,0.298,0.73
+business_vocabulary,9,0.13,0.121,1.07
+reply_or_forward,6,0.087,0.066,1.32
+html_leftovers,3,0.043,0.054,0.81
+link_only,0,0.0,0.038,0.0
+obfuscation,0,0.0,0.036,0.0
+mostly_non_ascii,0,0.0,0.0,

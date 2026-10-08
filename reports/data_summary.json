@@ -1,0 +1,24 @@
+{
+  "cleaning": {
+    "rows_in": 33716,
+    "empty_dropped": 51,
+    "duplicates_dropped": 4592,
+    "label_conflicts_dropped": 0,
+    "rows_out": 29073
+  },
+  "split_sizes": {
+    "test": {
+      "ham": 2909,
+      "spam": 2906
+    },
+    "train": {
+      "ham": 9309,
+      "spam": 9297
+    },
+    "val": {
+      "ham": 2328,
+      "spam": 2324
+    }
+  },
+  "template_groups_crossing_splits": 0
+}

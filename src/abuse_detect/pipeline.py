@@ -194,6 +194,7 @@ def shortcut_experiment(sp: Splits, recipe: str, cfg: dict[str, Any]) -> dict[st
             sp.y_te, models.scores(model, sp.x_te), thr
         ),
         "top_ham_features_unmasked": models.top_features(model, k=15)["ham"],
+        "top_word_features_unmasked": models.top_features(model, k=15, prefix="word__"),
     }
 
 

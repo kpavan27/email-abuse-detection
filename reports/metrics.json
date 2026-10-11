@@ -343,7 +343,133 @@
         "char__ \" ",
         -5.176130888250804
       ]
-    ]
+    ],
+    "top_word_features_unmasked": {
+      "spam": [
+        [
+          "word__no",
+          5.391544805652672
+        ],
+        [
+          "word__your",
+          5.2552869374757405
+        ],
+        [
+          "word__http",
+          4.465583470375912
+        ],
+        [
+          "word__you",
+          4.244313972067226
+        ],
+        [
+          "word__here",
+          4.0809800903807725
+        ],
+        [
+          "word__mobile email",
+          3.9483022745298038
+        ],
+        [
+          "word__phone mobile",
+          3.932775007603674
+        ],
+        [
+          "word__remove",
+          3.6633370679199326
+        ],
+        [
+          "word__money",
+          3.6003670606238263
+        ],
+        [
+          "word__mobile",
+          3.5611280809758528
+        ],
+        [
+          "word__account",
+          3.4415454869291904
+        ],
+        [
+          "word__man",
+          3.3999743841585004
+        ],
+        [
+          "word__online",
+          3.361706167006435
+        ],
+        [
+          "word__click here",
+          3.329012499272214
+        ],
+        [
+          "word__life",
+          3.326590612418105
+        ]
+      ],
+      "ham": [
+        [
+          "word__enron",
+          -10.27244287949963
+        ],
+        [
+          "word__vince",
+          -6.549210188384746
+        ],
+        [
+          "word__website",
+          -5.261069373976066
+        ],
+        [
+          "word__louise",
+          -5.2474254740080655
+        ],
+        [
+          "word__the",
+          -4.862109166801314
+        ],
+        [
+          "word__doc",
+          -4.817738249178627
+        ],
+        [
+          "word__thanks",
+          -4.794491287477547
+        ],
+        [
+          "word__enron com",
+          -4.351232150344992
+        ],
+        [
+          "word__gas",
+          -4.1579909923142475
+        ],
+        [
+          "word__attached",
+          -4.054619465677763
+        ],
+        [
+          "word__me know",
+          -3.851582847565573
+        ],
+        [
+          "word__houston",
+          -3.8226154178364014
+        ],
+        [
+          "word__let me",
+          -3.538138622903915
+        ],
+        [
+          "word__on",
+          -3.529522566730596
+        ],
+        [
+          "word__password",
+          -3.489589316183528
+        ]
+      ]
+    }
   },
   "drift_experiment": {
     "description": "Trained on ham + spam sent before 2005; recall compared on held-out spam from before 2005 (in-period) and from 2005 (future).",
@@ -487,5 +613,5 @@
       "enron capitalism"
     ]
   },
-  "runtime_seconds": 604.4
+  "runtime_seconds": 464.2
 }

@@ -71,8 +71,10 @@ def scores(model: Pipeline, texts) -> np.ndarray:
     return model.predict_proba(texts)[:, 1]
 
 
-def top_features(model: Pipeline, k: int = 25) -> dict[str, list[tuple[str, float]]]:
-    """Top spam and ham features of a fitted linear pipeline."""
+def top_features(
+    model: Pipeline, k: int = 25, prefix: str | None = None
+) -> dict[str, list[tuple[str, float]]]:
+    """Top spam and ham features of a fitted linear pipeline, optionally one feature block."""
     clf = model.named_steps["clf"]
     if "features" in model.named_steps:
         names = model.named_steps["features"].get_feature_names_out()
@@ -83,6 +85,8 @@ def top_features(model: Pipeline, k: int = 25) -> dict[str, list[tuple[str, floa
     else:  # ComplementNB has no coef_
         weights = clf.feature_log_prob_[1] - clf.feature_log_prob_[0]
     order = np.argsort(weights)
+    if prefix is not None:
+        order = np.array([i for i in order if str(names[i]).startswith(prefix)], dtype=int)
     ham = [(str(names[i]), float(weights[i])) for i in order[:k]]
     spam = [(str(names[i]), float(weights[i])) for i in order[::-1][:k]]
     return {"spam": spam, "ham": ham}

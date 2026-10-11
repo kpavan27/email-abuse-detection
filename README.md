@@ -31,11 +31,11 @@ blocked**. The threshold is chosen on the validation split and applied unchanged
 
 **1. The corpus contains label shortcuts, and a naive model uses them.**
 In this dataset, all ham was collected from Enron mailboxes between 1999 and 2002, and 92%
-of spam is dated 2003-2005. 46% of ham mentions "enron"; 0.007% of spam does. An
-unmasked model's strongest ham features are `enron`, `vince`, `louise` and `houston`, and
-"2005" ranks among its strongest spam features. None of that exists in real traffic.
-The selected model is trained with mailbox-identity tokens and four-digit years removed,
-and that step is bundled inside the saved artifact so serving cannot skip it.
+of spam is dated 2003-2005. 46% of ham mentions "enron"; 0.007% of spam does. Trained on
+unmasked text, the model's strongest ham words are `enron`, `vince` and `louise`, with
+`houston` also in the top 15 (`metrics.json → shortcut_experiment`). None of that exists
+in real traffic. The selected model is trained with mailbox-identity tokens and four-digit
+years removed, and that step is bundled inside the saved artifact so serving cannot skip it.
 
 A first attempt replaced identity tokens with a placeholder (`_id_`). The model learned
 the placeholder as its single strongest ham feature: the shortcut had been renamed, not
